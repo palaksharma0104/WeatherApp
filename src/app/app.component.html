@@ -1,11 +1,18 @@
+<div class="search">
+  <form #form="ngForm" (submit)="onSubmit()" action="">
+    <input type="text" placeholder="Enter a city" name="city" [(ngModel)]="cityName">
+  </form>
+</div>
+
 <div class = "container">
   <div class ="upper-data">
-  <img src="../assets/hot.jpg" *ngIf="14 > 15">
-  <img src="../assets/cold.jpg" *ngIf="14 <= 15">
+    <img src="../assets/cold.jpg">
+    <img src="{{ weatherImageSrc }}" >
+  
 
   <div class ="weather-data"> 
     <div class="location">{{weatherData?.resolvedAddress}}</div>
-    <div class="temperature">{{ weatherData?.days?.[0]?.temp | number: '1.0-0'}}°C</div>
+    <div class="temperature">{{ weatherData?.days?.[0]?.temp ?? 0 | number: '1.0-0'}}°C</div>
   </div>
 </div>
 

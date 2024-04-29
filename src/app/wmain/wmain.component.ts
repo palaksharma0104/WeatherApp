@@ -1,28 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { WeatherService } from './services/weather.service';
-import { WeatherData, Day, CurrentConditions } from './services/weather-data'; // Adjust path as needed
+import { WeatherService } from '../services/weather.service';
+import { WeatherData, Day, CurrentConditions } from '../services/weather-data'; // Adjust path as needed
 import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
-import { Router } from '@angular/router';
+
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-wmain',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FormsModule, LoginComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [CommonModule, FormsModule],
+  templateUrl: './wmain.component.html',
+  styleUrl: './wmain.component.css'
 })
 
-export class AppComponent implements OnInit {
+export class WmainComponent implements OnInit {
   
   weatherData: WeatherData | null = null;
   weatherImageSrc = '';
 
-  constructor(private weatherService: WeatherService, private router: Router) {}
+  constructor(private weatherService: WeatherService) {}
   
 
   cityName: string = '';

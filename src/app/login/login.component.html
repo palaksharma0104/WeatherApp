@@ -1,0 +1,23 @@
+<div class="container-lg d-flex justify-content-center align-items-center vh-100">
+  <div class="card border shadow-sm" style="max-width: 400px;">
+    <div class="card-body">
+      <form action="/weather" method="get">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="username" placeholder="Enter your sunshine username">
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" id="password" placeholder="Password">
+          <a href="#" class="text-muted float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Show Password">
+            <i class="fas fa-eye"></i>
+          </a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Let's See the Weather!</button>
+        <hr>
+        <div class="text-center">
+          <p class="h5">New to Sunny Side Up?</p>
+          <a href="/signup" class="btn btn-outline-primary">Sign Up for Sunshine!</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

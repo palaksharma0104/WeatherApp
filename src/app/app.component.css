@@ -1,0 +1,31 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+body {
+    all:unset;
+    /* background: linear-gradient(to bottom, #ffffff 100%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+
+  .navbar-cute {
+    background-color: #ffffff;  /* Light blue example */
+    border-bottom: 2px solid #e0e0e0; /* Optional border */
+  }
+  
+  .container {
+    text-align: center;
+  }
+
+  .btn-cute {
+    background-color: #ffca8d; /* Light orange */
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: #ffffff; /* White */
+    font-weight: bold;
+    cursor: pointer;
+  }
